@@ -4,7 +4,9 @@ from django.db import models
 
 class Servicios(models.Model):
    nombre= models.CharField(max_length=50)
-   camada= models.IntegerField()
+   
+   def __str__(self):
+      return f'{self.nombre}'
 
 class Profesionales(models.Model):
    nombre= models.CharField(max_length=30)
@@ -12,7 +14,7 @@ class Profesionales(models.Model):
    email= models.EmailField(null=True)
 
    def __str__(self):
-      return f'{self.nombre}{self.apellido}'
+      return f'{self.nombre} {self.apellido}'
 
 class Usuarios(models.Model):
    nombre= models.CharField(max_length=30)
