@@ -1,0 +1,25 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <ul>
+        
+        {% for  servicio in servicios %}
+            <li>
+                <a href="{% url 'DetalleServicios' servicio.id %}" > {{servicio}} </a>    
+            </li>
+
+            <div>
+                <button>
+                    <a href="{% url 'EliminarServicios' servicio.id %}">Eliminar</a>
+                </button>
+                <button>
+                    <a href="{% url 'ActualizarServicios' servicio.id %}">Editar</a>
+                </button>
+            </div>
+            
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'CreaServicios' %}">Crear Servicio</a>
+
+{% endblock contenidoQueCambia %}

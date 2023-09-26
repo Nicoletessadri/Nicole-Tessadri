@@ -1,9 +1,9 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
-        <form action="{% url 'ProfesionalesFormulario' %}" method="post">{% csrf_token %}
+        <form action="{% url 'ActualizarServicios' servicio.id %}" method="post">{% csrf_token %}
 
-            {{miFormulario.as_p}}
+            {{form.as_p}}
             
             <button type="submit">Enviar</button>
         </form>

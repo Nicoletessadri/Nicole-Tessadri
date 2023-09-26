@@ -7,6 +7,13 @@
             Gracias a este modelo, nuestros especialistas distribuyen su tiempo entre tres labores que consideramos primordiales para una atención excelente y en continua mejora: asistencia médica, docencia e investigación.<br></br>
                 
             Así, aseguramos una formación y desarrollo profesional constante, que redunde en beneficios para nuestros pacientes.
-                
+            
+            <ul>
+        
+                {% for  profesional in profesionales %}
+                    <li> {{profesional}} </li>
+                    
+                {% endfor %}
+            </ul>
                  </p>
 {% endblock contenidoQueCambia %}

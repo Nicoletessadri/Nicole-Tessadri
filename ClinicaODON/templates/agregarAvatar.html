@@ -1,11 +1,11 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
-        <form action="{% url 'ProfesionalesFormulario' %}" method="post">{% csrf_token %}
+        <form action="{% url 'AgregarAvatar' %}"  enctype="multipart/form-data"   method="post">{% csrf_token %}
 
             {{miFormulario.as_p}}
             
-            <button type="submit">Enviar</button>
+            <button type="submit">Guardar</button>
         </form>
         
 {% endblock contenidoQueCambia %}
