@@ -13,7 +13,9 @@
             {% endif %}
 
             <p>Bienvenid@ {{user.username}}</p>
+            <a href="{% url 'user_detail' %}">Ver detalles del usuario</a>
             <a class="btn btn-primary" href="{% url 'Logout' %}">Logout</a>
+            
         {% else %}
                 <a class="btn btn-primary" href="{% url 'Login' %}">Login</a>
                 <a class="btn btn-primary" href="{% url 'Registrar' %}">Sign Up</a>

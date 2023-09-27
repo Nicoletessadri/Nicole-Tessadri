@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth.views import LogoutView
-from ClinicaODON.views import inicio, servicio, lista_servicios, inicio, servicios, profesionales, usuarios, profesionales_formulario, servicio_formulario, usuarios_formulario, busquedaServicio, buscar, listaProfesionales, eliminarProfesional, editarProfesional, ServicioList, ServicioCreate, ServicioDetail, ServicioDelete, ServicioUpdate, loginView, register, autorizacion, editar_perfil, agregarAvatar
+from ClinicaODON.views import inicio, servicio, lista_servicios, inicio, servicios, profesionales, usuarios, profesionales_formulario, servicio_formulario, usuarios_formulario, busquedaServicio, buscar, listaProfesionales, eliminarProfesional, editarProfesional, ServicioList, ServicioCreate, ServicioDetail, ServicioDelete, ServicioUpdate, loginView, register, autorizacion, editar_perfil, agregarAvatar, AboutMe, contact, user_detail
 urlpatterns = [
     path('agrega-servicio/<nombre>', servicio),
     path('lista-servicios/', lista_servicios),
@@ -27,5 +27,7 @@ urlpatterns = [
     path('autorizacion', autorizacion, name="Autorizacion"),
     path('editar-perfil', editar_perfil, name="EditarPerfil"),
     path('agregar-avatar', agregarAvatar, name="AgregarAvatar"),
-
+    path('aboutme', AboutMe, name="Aboutme"),
+    path('contacto', contact, name="Contacto"),
+    path('user/detail/',user_detail, name='user_detail')
 ]

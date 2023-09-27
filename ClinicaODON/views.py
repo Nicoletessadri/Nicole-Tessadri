@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest
 from .models import Servicios, Profesionales, Usuarios, Avatar
-from .forms import ServicioFormulario, ProfesionalesFormulario, UsuariosFormulario, UserEditForm, AvatarFormulario
+from .forms import ServicioFormulario, ProfesionalesFormulario, UsuariosFormulario, UserEditForm, AvatarFormulario, ContactForm
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import DeleteView, UpdateView, CreateView
 from django.views.generic.list import ListView
@@ -10,6 +10,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -320,4 +321,16 @@ def agregarAvatar(req):
 
             miFormulario= AvatarFormulario()
             return render(req, "agregarAvatar.html", {"miFormulario": miFormulario}) 
-        
+
+def AboutMe(req):
+    return render(req, "aboutme.html")
+
+@login_required
+def contact(req):
+    form= ContactForm()
+    return render(req, 'contacto.html', {'form': form})
+
+@login_required
+def user_detail(request):
+    user = request.user
+    return render(request, 'user_detail.html', {'user': user})
