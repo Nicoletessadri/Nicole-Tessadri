@@ -5,3 +5,5 @@ En la pagina de inicio, arriba, encontramos 6 botones. El primero es la pagina d
 En la URL /ClinicaODO/profesionales-formulario/ nos permite ingresar profesionales a nuestra base de datos. Lo mismo sucede con /servicio-formulario (esta funcionalidad tambien se puede hacer con la URL /agrega-servicio/<nombre>) y /usuarios-formulario donde podemos ingresar servicios y usuarios respectivamente.
 
 En la URL /ClinicaODO/busqueda-servicio podemos buscar los servicios que ya se encuentran en nuestra base de datos. Estos se pueden ver reflejados en la URL /lista-servicios
+
+https://drive.google.com/file/d/1-lEBnC0o7-WiEOAC1QyKiP4RdcnpRaCn/view?usp=drive_link - link a video
